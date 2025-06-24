@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1f2937;
+    /* color: #1f2937; */
+    color: #063649;
 }
 
 .chat-container {
