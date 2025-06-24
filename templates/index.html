@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMPLE RAG CHATBOT</title>
+    <title>Get CloudGTM for AWS answers now</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <h1>SAMPLE RAG CHATBOT</h1>
+            <div class="logo">T</div>
+            <h1>Get CloudGTM for AWS answers now</h1>
         </div>
         <div class="chat-messages" id="chat-messages">
-            <div class="message bot">
-                Welcome to the RAG Chatbot. I am ready to answer your questions about the text I've been trained on.
+            <div class="welcome-message">
+                <h2>Welcome to CloudGTM AI Assistant</h2>
+                <p>I'm here to help you with AWS marketplace questions and CloudGTM strategies. Ask me anything!</p>
             </div>
         </div>
         <div class="chat-input">
             <form id="chat-form">
-                <input type="text" id="user-input" placeholder="Enter your question..." required>
+                <input type="text" id="user-input" placeholder="Ask about CloudGTM, AWS Marketplace, or co-selling strategies..." required>
                 <button type="submit">Send</button>
             </form>
         </div>
     </div>
-
     <script>
         document.getElementById('chat-form').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -34,6 +35,7 @@
             
             // Disable the submit button while processing
             submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
             
             // Add user message to chat
             addMessage(question, 'user');
@@ -64,20 +66,21 @@
                 
                 // Add context if available
                 if (data.context && data.context.length > 0) {
-                    addMessage('Context used:', 'system');
+                    addMessage('📚 Context sources used:', 'system');
                     data.context.forEach((chunk, index) => {
-                        addMessage(`Chunk ${index + 1}: ${chunk}`, 'system');
+                        addMessage(`Source ${index + 1}: ${chunk}`, 'system');
                     });
                 }
             } catch (error) {
                 console.error('Error details:', error);
-                addMessage(`Error: ${error.message}`, 'error');
+                addMessage(`❌ Error: ${error.message}`, 'error');
             } finally {
                 // Re-enable the submit button
                 submitButton.disabled = false;
+                submitButton.textContent = 'Send';
             }
         });
-
+        
         function addMessage(text, type) {
             const messagesDiv = document.getElementById('chat-messages');
             const messageDiv = document.createElement('div');
@@ -88,4 +91,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
