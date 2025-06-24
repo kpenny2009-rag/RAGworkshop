@@ -1,91 +1,228 @@
-Retrieval-Augmented Generation: A Comprehensive Analysis of Modern AI Systems
+General FAQs
 
-Introduction
 
-Retrieval-Augmented Generation (RAG) represents a paradigm shift in artificial intelligence, combining the power of large language models with external knowledge retrieval to create more accurate, factual, and contextually relevant responses. This hybrid approach addresses one of the fundamental limitations of traditional language models: their static knowledge cutoff and inability to access real-time or domain-specific information. RAG systems have emerged as a critical solution for applications requiring up-to-date information, factual accuracy, and domain expertise.
+Private offers
+How do I archive a private offer?
+Archive direct or partner private offers in Tackle when you want to clean up your offers, retire them for any reason, or if an offer is expiring soon.
+Things to know before you archive an offer
+* You can archive any direct or partner private offer in Tackle.
+* Offers cannot be deleted, which is why archiving is ideal for offers you want to remove from your dashboard.
+Archive a private offer
+1. In Tackle, go to the left menu and click Offers.
+2. Find the offer you want to archive.
+3. Click the More menu option and then click Archive. A confirmation pop-up opens.
+4. Click Archive to confirm your selection.
+​Note: Archiving an offer only removes it from Tackle Offers but does not permanently delete it in Tackle or the marketplace. You can recover an archived offer by contacting a Tackle Marketplace guide to assist you.
+5. After the offer is archived, it will show in Archived status. You can check the status in the Offers home page🔗 at any time.
 
-The fundamental architecture of RAG consists of two primary components: a retrieval system that searches through external knowledge sources and a generation system that produces responses based on both the retrieved information and the model's pre-trained knowledge. This dual approach enables RAG systems to provide more reliable, verifiable, and contextually appropriate responses compared to standalone language models.
 
-Historical Context and Development
-
-The concept of combining retrieval with generation in natural language processing has evolved significantly over the past decade. Early approaches focused on simple document retrieval followed by template-based response generation. However, the advent of transformer-based language models and advances in information retrieval techniques have enabled more sophisticated integration between these components.
-
-The term "Retrieval-Augmented Generation" was popularized by Lewis et al. in their 2020 paper, which introduced a framework for combining dense retrieval with sequence-to-sequence generation. This work demonstrated that RAG systems could outperform traditional language models on knowledge-intensive tasks while maintaining fluency and coherence in generated text.
-
-Since then, RAG has become increasingly prevalent in commercial applications, with major technology companies implementing RAG-based systems for customer service, content generation, and information retrieval. The approach has proven particularly valuable in domains where accuracy and timeliness are critical, such as healthcare, finance, and legal services.
-
-Architecture and Components
-
-RAG systems typically employ a three-stage pipeline: indexing, retrieval, and generation. The indexing stage involves processing and storing external knowledge sources in a format optimized for efficient retrieval. This often includes creating dense vector representations of documents using encoder models, which enable semantic similarity searches.
-
-The retrieval stage identifies the most relevant documents or passages from the knowledge base given a user query. This can be accomplished through various methods, including sparse retrieval (e.g., BM25), dense retrieval using neural encoders, or hybrid approaches that combine multiple retrieval strategies. The retrieved documents are then ranked and filtered to select the most relevant information for the generation stage.
-
-The generation stage combines the retrieved information with the user's query to produce a coherent and accurate response. This typically involves a large language model that has been fine-tuned to incorporate external knowledge effectively. The model must learn to balance information from the retrieved documents with its pre-trained knowledge, ensuring that the final response is both factual and contextually appropriate.
-
-Key Advantages and Benefits
-
-RAG systems offer several significant advantages over traditional language models. First and foremost, they address the knowledge cutoff problem by enabling access to current information. This is particularly important for applications requiring up-to-date data, such as news analysis, financial reporting, or technical documentation.
-
-Second, RAG systems improve factual accuracy by grounding responses in verifiable sources. This reduces the likelihood of hallucination, a common problem with large language models where they generate plausible but incorrect information. By retrieving relevant documents, RAG systems can provide citations and evidence for their responses, increasing transparency and trustworthiness.
-
-Third, RAG enables domain-specific customization without requiring extensive retraining. Organizations can simply update their knowledge base with relevant documents, allowing the system to provide specialized information without modifying the underlying language model. This makes RAG particularly valuable for enterprise applications where domain expertise is critical.
-
-Fourth, RAG systems can handle long-form content more effectively than traditional language models, which often have context length limitations. By retrieving relevant passages, RAG can process and synthesize information from documents that exceed the model's maximum input length.
-
-Applications and Use Cases
-
-RAG systems have found widespread application across numerous domains. In customer service, RAG-powered chatbots can access product documentation, FAQs, and knowledge bases to provide accurate and helpful responses to customer inquiries. This reduces the need for human intervention while improving customer satisfaction through more relevant and accurate information.
-
-In healthcare, RAG systems can assist medical professionals by retrieving relevant research papers, clinical guidelines, and patient records. This enables more informed decision-making while ensuring that recommendations are based on current medical knowledge and best practices.
-
-In legal services, RAG can help lawyers and legal professionals by retrieving relevant case law, statutes, and legal precedents. This accelerates legal research and ensures that legal advice is grounded in current and applicable legal frameworks.
-
-In education, RAG systems can provide personalized tutoring by retrieving relevant educational materials and adapting explanations to individual student needs. This enables more effective learning experiences while ensuring that information is accurate and up-to-date.
-
-In content creation, RAG can assist writers and journalists by retrieving relevant background information, statistics, and source materials. This improves the quality and accuracy of generated content while reducing research time.
-
-Technical Challenges and Limitations
-
-Despite their advantages, RAG systems face several technical challenges that must be addressed for optimal performance. One of the primary challenges is retrieval quality, which directly impacts the accuracy of generated responses. Poor retrieval can lead to irrelevant information being incorporated into responses, reducing overall quality.
-
-Retrieval quality depends on several factors, including the quality of the knowledge base, the effectiveness of the retrieval model, and the relevance ranking algorithms. Ensuring comprehensive coverage of the target domain while maintaining high-quality, up-to-date information requires significant ongoing effort and resources.
-
-Another challenge is the integration between retrieval and generation components. The retrieved information must be effectively incorporated into the generation process without disrupting the fluency and coherence of the response. This requires careful tuning of the generation model and potentially specialized training approaches.
-
-Context length limitations remain a challenge, particularly when dealing with long documents or multiple retrieved passages. While RAG can help address this by retrieving relevant portions of documents, there are still practical limits on how much retrieved information can be effectively incorporated into a single response.
-
-Privacy and security concerns also arise when RAG systems access external knowledge sources. Organizations must ensure that sensitive information is properly protected and that access controls are implemented to prevent unauthorized retrieval of confidential data.
-
-Evaluation and Metrics
-
-Evaluating RAG systems requires a comprehensive approach that considers both retrieval and generation quality. Traditional metrics for information retrieval, such as precision, recall, and mean reciprocal rank, are important for assessing the quality of the retrieval component.
-
-For the generation component, metrics such as BLEU, ROUGE, and BERTScore can be used to evaluate fluency and coherence. However, these metrics may not fully capture the factual accuracy and relevance of RAG-generated responses.
-
-Human evaluation remains crucial for assessing the overall quality of RAG systems. This typically involves human annotators evaluating responses for accuracy, relevance, fluency, and helpfulness. Human evaluation can identify issues that automated metrics may miss, such as subtle factual errors or inappropriate tone.
-
-Recent research has also introduced specialized metrics for RAG evaluation, such as faithfulness (measuring how well the response reflects the retrieved information) and answerability (measuring whether the retrieved information is sufficient to answer the query).
-
-Future Directions and Research Opportunities
-
-The field of RAG continues to evolve rapidly, with several promising research directions emerging. One area of active research is improving retrieval quality through more sophisticated retrieval models and ranking algorithms. This includes exploring multi-modal retrieval, which can incorporate images, audio, and other media types alongside text.
-
-Another promising direction is the development of more efficient RAG architectures that can handle larger knowledge bases and provide faster response times. This includes research into approximate retrieval methods, caching strategies, and distributed retrieval systems.
-
-Personalization and adaptation represent another important research area. Future RAG systems may be able to learn user preferences and adapt their retrieval and generation strategies accordingly. This could enable more personalized and contextually appropriate responses.
-
-Integration with other AI technologies, such as reasoning systems and knowledge graphs, could further enhance RAG capabilities. This could enable more sophisticated reasoning about retrieved information and better integration of structured and unstructured knowledge.
-
-Ethical considerations and responsible AI development will also be crucial for the future of RAG. This includes addressing issues of bias in retrieval and generation, ensuring transparency in information sources, and developing methods for detecting and mitigating misinformation.
-
-Conclusion
-
-Retrieval-Augmented Generation represents a significant advancement in artificial intelligence, offering a practical solution to many of the limitations of traditional language models. By combining the power of large language models with external knowledge retrieval, RAG systems can provide more accurate, factual, and contextually relevant responses.
-
-The widespread adoption of RAG across various domains demonstrates its practical value and potential for impact. However, realizing the full potential of RAG requires addressing technical challenges, developing appropriate evaluation methods, and ensuring responsible deployment.
-
-As the field continues to evolve, RAG systems are likely to become increasingly sophisticated and capable. Future developments in retrieval quality, generation integration, and system efficiency will enable new applications and use cases that are currently beyond reach.
-
-The success of RAG also highlights the importance of hybrid approaches in artificial intelligence, where combining multiple techniques can achieve better results than any single approach alone. This lesson is likely to influence the development of other AI systems and applications in the years to come.
-
-Ultimately, RAG represents not just a technical innovation but a fundamental shift in how we think about AI systems and their relationship with knowledge. By enabling AI to access and utilize external information effectively, RAG opens new possibilities for creating more intelligent, useful, and trustworthy AI applications that can better serve human needs and goals. 
+AWS Marketplace private offers FAQs
+Answers to help you get through some of the most common issues transacting 
+How are my AWS cloud marketplace fees determined?
+AWS charges a fee on all marketplace transactions. The amount of the fee charged per transaction can be dependent on the seller’s relationship with the particular cloud provider. For more information about your marketplace fee, contact your cloud BD and/or PDM.
+How are taxes calculated for cloud marketplace transactions?
+Note
+Tackle can provide a high level understanding about tax assessment for your marketplace transactions, but specific questions should be addressed to your cloud BD and/or PDM.
+AWS acts as the point of purchase for the sale of your software/product, not as the seller of record. When you register to sell a product on AWS Marketplace, you fill out a seller profile🔗 in the Amazon Marketplace Management Portal, and you will be listed as that entity publicly and taxed/ have disbursements sent to the bank account and legal entity you submit. In most cases, this is as a US entity and US Bank account, but you are able to use a bank account outside the US, using a product called Hyper-wallet. All product sales will be run through this legal entity. When a customer purchases the product, AWS acts as the point of purchase but is not used as the seller of record. Your company will be listed, along with the product they purchased on their next AWS bill and the buyer will be responsible for payment at the time that bill is due. AWS sends this out as part of the monthly AWS bill any AWS customer receives.
+For more information, see AWS Tax Help🔗.
+What types of end user license agreements (EULAs) are available in AWS Marketplace?
+When creating your listing or a private offer in AWS Marketplace, you have the option to use your own custom EULA or leverage one of the cloud provider’s standard contracts. Using the standard contracts provided by AWS can reduce the time it takes your buyer's legal team to review the EULA.
+Specific contracts available in AWS Marketplace:
+   * Custom EULA
+   * Standard Contract for AWS Marketplace (SCMP)
+   * Reseller Contract for AWS Marketplace (RCMP)
+For more information, see the AWS seller guide🔗.
+How do I change the expiration date of an AWS private offer?
+After an AWS Marketplace offer has been created, your buyer may need additional time before accepting. You can change the expiration date on an offer to give them more time to accept.
+To change the expiration date:
+   1. In Tackle, go to the left menu and click Offers.
+   2. Find the offer you want and click to view offer details.
+   3. Click the More menu and select Change expiration date.
+   4. Enter a new expiration date and click Update. A progress message appears.
+   5. Click Check for update to refresh the progress until you see confirmation that is ready in the AWS cloud marketplace portal.
+Note
+To change the expiration date and to keep the dates in sync between Tackle and the AWS Marketplace Management Portal (AMMP), you must create the offer and update the expiration date in Tackle. If you created the offer or updated the expiration in the AMMP, it will not sync with Tackle. If this is the case, you can manually change the date in portal and then update it in Tackle.
+To do this, open the offer in Tackle. Scroll down and click the Pencil icon next to Offer details. In Offer details, change the expiration date.
+What can I do if my customer accepted my private offer, but my offer status in Tackle isn't Accepted?
+For AWS future dated agreement (FDA) private offers, Tackle does not receive integrated notifications from AWS🔗 until the start of the agreement. Using an alternate solution, Tackle is able to update the Tackle offer status and provide acceptance notifications within an hour of acceptance for direct to buyer private offers. However, this solution is not available for private offers through a resale partner and, therefore, Tackle cannot update the Tackle offer status or send notifications until the start of the agreement.
+Does my buyer’s purchase count towards their AWS marketplace commit burndown?
+When a buyer transacts on your SaaS listing it will count towards their committed spend with AWS. Professional Service and BYOL listing types do not count towards a buyer's commit. Other commit details may vary, for more information about commit burndown, contact your AWS BD and/or PDM.
+Will my buyer’s cloud subscription auto-renew?
+Auto-renew defaults to “true” on public orders. Private Offers can not be auto-renewed. Buyers can update the auto-renew settings on their public subscription at any time.
+When will I get paid for my buyer’s subscription?
+Buyers on AWS Marketplace can set up invoicing payment terms with AWS. Any transactions they complete are subject to these payment terms and grouped into their AWS bill.
+Here is an example:
+   1. The customer subscribes to your product.
+   2. They receive an invoice from AWS on the 3rd of the following month OR on the date/s outlined in the flexible payment schedule (FPS) on the private offer. If the buyer is not on invoicing terms with AWS, and there is no flexible payment schedule, they will be billed immediately.
+   3. The buyer has net (X) days to pay their bill depending on the payment terms they have with AWS (30-120 days).
+   4. Once AWS receives the payment, they will disburse the funds depending on your disbursement settings. Note: if you have “monthly” disbursements, you will receive funds for payments made in the previous month. The 20th is the cut-off date for each month.
+See the AWS documentation for more information on disbursement settings🔗.
+For more information, see our article How to reconcile AWS payments.
+How do I know what payment terms my buyer is on with AWS?
+AWS, like most cloud marketplaces, typically does not disclose this information to sellers. If you need this information, capture it from the buyer as part of your sales process.
+​
+How do I cancel and refund orders made through AWS?
+You can cancel an active subscription (an offer that’s already been accepted) or provide a refund to your buyer for other reasons including:
+   * Buyer accidentally subscribed to the wrong private offer or at public offer pricing
+   * You need to amend an existing agreement in the AWS Marketplace, but your buyer is not on invoicing terms
+   * Buyer accidentally auto-renewed their subscription
+   * A private offer was created with incorrect terms and accepted by the buyer
+You can cancel and process refunds through the AWS Marketplace. Cancel any accepted (active) order by completing the Refund Request Form in the AWS Marketplace Management Portal.
+Note
+A cancellation may or may not be accompanied by a refund request.
+Prepare for the cancellation request
+You'll need the following information to process a cancellation or refund:
+​Note: If you don't have access to the info already, follow the steps below.
+   * AWS Account Number is located in the Tackle Data Feeds Customer Subscriber Report🔗
+   * Product ID (Product Code) is located in the Tackle Data Feeds Customer Subscriber Report🔗 or in the Order Notification
+   * Billing Period(s) for Refund is located in the Tackle Data Feeds Daily Fees Report🔗.
+   * If you cannot locate the subscription using the above, refer to the Agreements tab🔗 in the AWS Marketplace Management Portal.
+Important
+Once a request for a cancellation and/or refund has been submitted to AWS Marketplace, it cannot be rescinded.
+Refund and cancel orders
+   1. Confirm that a cancellation is necessary. If there is no agreement found, then the customer may not be subscribed and may not need a cancellation or refund. Contact Tackle Support🔗 if you are unsure of what to do next.
+   2. Go to the AWS Marketplace Management Portal > Refund Request Form🔗.
+​
+​Note: You can submit refunds for $0 if you only require the cancellation to be processed.
+​
+   3. Complete the form with the collected Identifiers.
+   4. For Additional Comments, include these items:
+      * If canceling the agreement, select Please cancel this agreement on this <Date>.
+      * Reason for the cancellation or refund. For example:
+      * The Public Order customer is unable to be identified in order to fulfill the order.
+      * The customer is being refunded for a Public Order and moving to a Private Offer.
+      * Customer needs to accept a new Private Offer to upgrade/downgrade/change terms of the agreement.
+      5. Submit the form and record the Refund Request Ticket ID.
+An outbound case will be created in the AWS Support Center Console with the refund status. The refund status will state one of the following:
+      * Completed: The refund was processed and no further action is required.
+      * Pending: The refund will be processed once the current billing cycle ends.
+      * Action Required: The request could not be processed and additional information is needed. A response can be sent directly to the support case. A new refund request form will need to be submitted.
+Once a refund is successfully processed, it will be reflected on the customer’s AWS billing account within 24-48 hours. However, it can take up to 5 business days for the funds to appear in the customer’s bank account.
+Note
+Tackle does not typically have access to the AWS Support Center Console, so you will have to monitor the status of the request.
+How does the AWS order process work?
+This reference article provides an overview of transacting on AWS Marketplace.
+Public order overview
+AWS public orders are available at the list price under the public EULA set on your listing. A buyer can subscribe directly from the listing and complete their registration with no sales interaction or negotiation.
+The following describes the public order process steps and considerations.
+      1. The buyer navigates to your AWS Marketplace listing and clicks Pay Now.
+      2. The buyer accepts the public terms.
+      * If the buyer completes registration:
+      1. You will receive a New AWS Order email notification.
+      2. The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      3. The order is booked/revenue recognized.
+      * If the buyer does not complete registration:
+      1. You will receive a New AWS Order email notification with a link to register the order.
+      2. You have 48 hours to identify the buyer and complete the information. If your buyer does not identify themselves within 48 hours, it is advised that you cancel and refund the order.
+      3. You provision the product to the buyer.
+      4. Depending on the buyer's payment terms with AWS, they will either have it added to their next monthly bill or be charged immediately.
+      5. Once they pay AWS for the order, AWS will disburse those funds to you based on your disbursement settings.
+      6. You reconcile the payment to the order.
+Direct private offers overview
+Private offers enable you to create and extend a unique offer based on specialized needs such as negotiated pricing, custom contract terms, and custom product SKU.
+Note
+A standard, direct private offer is used when a buyer does not have a current active subscription (agreement) through the Marketplace listing. It is also used to upgrade Free Trial customers to a paid subscription.
+The following describes the direct private offer process steps and considerations.
+      1. Come to an agreement with your buyer on what they will be purchasing and gather the AWS account ID that they will be using to purchase.
+      2. Create the offer in Tackle Offers🔗.
+      3. Send purchase instructions to the buyer using Tackle Offers.
+      4. The buyer accepts the private offer.
+      * If the buyer completes registration:
+      1. You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      2. The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      3. The order is booked/revenue recognized.
+      * If the buyer does not complete registration:
+      1. If you used Tackle Offers for this order, Tackle will wait an hour and then use the information from Tackle Offers to register the order.
+      2. You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      3. The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      4. The order is booked/revenue recognized.
+      5. You provision the product to the buyer.
+      6. Depending on the buyer's payment terms with AWS, they will either have it added to their next monthly bill or be charged immediately.
+      7. Once they pay AWS for the order, AWS will disburse those funds to you based on your disbursement settings.
+      8. You reconcile the payment to the order.
+For more information on how to create offers refer to our Tackle Academy course, Creating an AWS Private Offer in the Tackle Platform🔗.
+Amendment offers (ABO) overview
+The AWS Marketplace amendment offer is used when an active agreement needs to be modified. AWS Marketplace may refer to amendment offers as agreement-based offers (ABOs) in the AWS Marketplace Management Portal (AMMP).
+The following describes the amendment offer process steps and considerations.
+      1. Come to an agreement with your buyer on what they will be purchasing.
+      2. Create an agreement-based offer in AMMP and gather both the newly created offer ID as well as the offer ID of their current agreement.
+      3. Associate the ABO in Tackle Offers🔗.
+      4. Send purchase instructions to the buyer using Tackle Offers.
+      5. The buyer accepts the amendment offer.
+      * If the buyer completes registration:
+      * You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      * The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      * The order is booked/revenue recognized.
+      * If the buyer does not complete registration:
+      * If you used Tackle Offers for this order, Tackle will wait an hour and then use the information from Tackle Offers to register the order.
+      * You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      * The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      * The order is booked/revenue recognized.
+      6. You provision the product to the buyer.
+      7. Depending on the buyer's payment terms with AWS, they will either have it added to their next monthly bill or be charged immediately.
+      8. Once they pay AWS for the order, AWS will disburse those funds to you based on your disbursement settings.
+      9. You reconcile the payment to the order.
+Partner offer (CPPO)
+Partner offers are also known as channel partner private offers (CPPO). They are used to sell your products through a reseller.
+The following describes the partner offer order process steps and considerations.
+      1. Come to an agreement with your reseller on what they will be selling to the end customer on your behalf.
+      2. Create the Partner Offer in Tackle Offers🔗.
+      3. The Reseller will receive an Opportunity and create a private offer for the end customer.
+      4. You will receive a Partner Offer Extended notification from Tackle.
+      5. The buyer accepts the partner offer.
+      * If the buyer completes registration:
+      * You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      * The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      * The order is booked/revenue recognized.
+      * If the buyer does not complete registration:
+      * If you used Tackle Offers for this order, Tackle will wait an hour and then use the information from Tackle Offers to register the order.
+      * You will receive a New AWS Order email notification w/Tackle Offers Metadata.
+      * The buyer will receive a welcome email with the email/URL you put in the Product Support section of your Tackle Listing Template.
+      * The order is booked/revenue recognized.
+      6. You provision the product to the buyer.
+      7. Depending on the buyer's payment terms with AWS, they will either have it added to their next monthly bill or be charged immediately.
+      8. Once they pay AWS for the order, AWS will disburse those funds to you and the reseller based upon your disbursement settings.
+      9. You reconcile the payment to the order.
+AWS Marketplace co-sell FAQs
+Get help with some of the most common issues that occur while co-selling with Amazon Web Services (AWS).
+How can I find my Alliance Lead?
+Look up your alliance lead in AWS Partner Central when setting up things like co-selling with AWS in Tackle.
+      1. Go to the AWS Partner Central🔗. Sign in if you're not already logged on.
+      2. Click My profile and see what your role is. It should say Alliance lead (and there is only one Alliance lead per organization).
+      3. If you are not the alliance lead, you can find out who is by clicking My company. Under Alliance lead is the name of the account with that role at your company.
+      4. You can click Request change if you need to change your Alliance Lead.
+Is my seller account eligible for APN Customer Engagements (ACE)?
+In order to set up co-selling with AWS through Tackle, you must first be ACE eligible so you can receive referrals from AWS. In order to be ACE eligible, you must have:
+      * An AWS Partner Central account
+      * Accepted the ACE Terms and Conditions in AWS Partner Central under Partner Central > Sell
+​
+      * Validated status in AWS Partner Paths
+      * At least one solution with approved Foundational Technical Review (FTR)
+      * Ten submitted and validated co-sell opportunities in ACE
+      * An active Partner Solutions Finder Listing. (You can create one in AWS Partner Central by clicking My Company > Company profile.)
+You can check whether you are Validated and have the necessary FTR approval in AWS Partner Central.
+         1. Sign in to AWS Partner Central🔗 with the alliance lead role.
+​
+Note: If you're not sure who is the alliance lead for your organization, you can look in AWS Partner Central to find out. If you can't log in to AWS Partner Central, you need to create an account🔗.
+​
+         2. Scroll down to the AWS Partner Paths section. If you are ACE eligible, you will have a Validated status, and see at least one solution with an approved FTR.
+         3. If you would like more information about ACE eligibility, check the AWS Partner Central documentation, such as this ACE program FAQ🔗, for more details.
+How do I migrate from a different co-sell solution?
+If you were previously using a different solution to manage your ACE CRM integration before Tackle (either a different product or your own custom solution), follow these steps to make the switch easier.
+            1. Install and configure the Tackle - Salesforce integration. This way, once you migrate your content, you can connect to Tackle through Salesforce and use the Tackle internal review to test submissions.
+            2. Follow the steps in Get started co-selling with AWS. This automatically disconnects you from your previous solution by switching the AWS users or roles.
+            3. Your full AWS co-sell history will be imported into Tackle automatically and synced to Salesforce. To link your AWS opportunities with your Salesforce opportunities, see Link and relink AWS co-sells to Salesforce opportunities.
+Important
+Be sure to follow every step when connecting Tackle to ACE, otherwise you may run into issues. Do not reuse any AWS Users or Roles that you used previously.
+How do I receive support from AWS Partner Central?
+AWS Marketplace has developed the following process for opening support tickets for ACE in Partner Central. Failure to follow this process may delay the resolution of your issue.
+Necessary Role/Permissions: Alliance Lead
+            1. Click "Contact Support" in the upper right corner of Partner Central.
+            2. Click "Open New Case".
+            3. Fill out the form to open a new case.
+            * For the "I have a question regarding" dropdown, select "ACE Leads and Opportunities".
+            * For the "Get Specific" dropdown, select "CRM Integration".
+            * For the "Description" section, detail the issue you are attempting to resolve
+            * You can also add attachments, such as screenshots of your error or error messages, to your case.
+            * When you're finished, click Submit.
+            4. After you submit your request, you'll receive a APN case number to help you track your ticket. For better support, you can provide this to your Tackle Marketplace Architect.
